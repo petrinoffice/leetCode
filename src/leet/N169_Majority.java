@@ -1,9 +1,6 @@
 package leet;
 
 import java.util.Arrays;
-import java.util.Map;
-import java.util.function.Function;
-import java.util.stream.Collectors;
 
 public class N169_Majority {
     public static void main(String[] args) {
