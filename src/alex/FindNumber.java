@@ -14,22 +14,18 @@ public class FindNumber {
         System.out.println(solution(arr6, -14));
     }
 
-    private static boolean solution(int[][] numbers, int target){
-        for (int i = numbers.length - 1; i >= 0; i--) {
-            for (int j = numbers[i].length - 1; j >= 0; j--) {
-                if (numbers[i][j] == target) {
-                    return true;
-                }
+    private static boolean solution(int[][] numbers, int target) {
+        int i = 0, j = numbers[0].length - 1;
 
-                if (numbers[i][j]>target){
-                    continue;
-                }
-
-                if (numbers[i][j]<target){
-                    break;
-                }
+        while (i < numbers.length && j > 0) {
+            if (numbers[i][j] == target) {
+                return true;
             }
+            if (numbers[i][j] > target) {
+                j--;
+            } else i++;
         }
+
         return false;
     }
 }
