@@ -2,12 +2,12 @@ package leet;
 
 import java.util.Arrays;
 
-public class TwentySeven {
+public class N27 {
     public static void main(String[] args) {
 
-        new TwentySeven().print(new int[]{0, 1, 2, 2, 3, 0, 4, 2}, 2);
-        new TwentySeven().print(new int[]{3,2,2,3}, 3);
-        new TwentySeven().print(new int[]{4,5}, 4);
+        new N27().print(new int[]{0, 1, 2, 2, 3, 0, 4, 2}, 2);
+        new N27().print(new int[]{3,2,2,3}, 3);
+        new N27().print(new int[]{4,5}, 4);
     }
 
     public void print(int[] nums, int val) {

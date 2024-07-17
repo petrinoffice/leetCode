@@ -2,14 +2,14 @@ package leet;
 
 import java.util.Arrays;
 
-public class TwentySix {
+public class N26 {
     public static void main(String[] args) {
      print(new int[]{1,1,2});
      print(new int[]{0,0,1,1,1,2,2,3,3,4});
     }
 
     public static void print(int[] nums) {
-        System.out.println(new TwentySix().removeDuplicates(nums));
+        System.out.println(new N26().removeDuplicates(nums));
         System.out.println(Arrays.toString(nums));
     }
 
