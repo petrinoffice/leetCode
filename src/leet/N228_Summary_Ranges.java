@@ -17,7 +17,7 @@ public class N228_Summary_Ranges {
             int start = i;
             int end = i;
 
-            while (end++ < nums.length - 1) {
+            while (++end < nums.length) {
                 if (nums[end] != nums[i] + 1) {
                     break;
                 }
