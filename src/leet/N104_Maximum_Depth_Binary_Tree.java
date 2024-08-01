@@ -2,26 +2,26 @@ package leet;
 
 import java.util.Objects;
 
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-
-    TreeNode() {
-    }
-
-    TreeNode(int val) {
-        this.val = val;
-    }
-
-    TreeNode(int val, TreeNode left, TreeNode right) {
-        this.val = val;
-        this.left = left;
-        this.right = right;
-    }
-}
-
 public class N104_Maximum_Depth_Binary_Tree {
+    private static class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+
+        TreeNode() {
+        }
+
+        TreeNode(int val) {
+            this.val = val;
+        }
+
+        TreeNode(int val, TreeNode left, TreeNode right) {
+            this.val = val;
+            this.left = left;
+            this.right = right;
+        }
+    }
+
     public static void main(String[] args) {
 
         TreeNode treeNode15 = new TreeNode(15);
@@ -44,7 +44,7 @@ public class N104_Maximum_Depth_Binary_Tree {
         int leftDeep = maxDepth(root.left);
         int rightDeep = maxDepth(root.right);
 
-        return Math.max(leftDeep, rightDeep)+1;
+        return Math.max(leftDeep, rightDeep) + 1;
     }
 
 
