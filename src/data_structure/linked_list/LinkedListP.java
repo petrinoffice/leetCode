@@ -1,53 +1,9 @@
-package dataStructure;
+package data_structure.linked_list;
 
 import java.util.Objects;
+import java.util.Stack;
 
 public class LinkedListP implements LinkedListInterface {
-    public static void main(String[] args) {
-        LinkedListP list = new LinkedListP(2);
-
-        System.out.println(list);
-        System.out.println(list.length);
-
-        list.append(3);
-        System.out.println(list);
-        System.out.println(list.length);
-
-        System.out.println(list.removeLast());
-        System.out.println(list);
-        System.out.println(list.length);
-
-        list.prepend(1);
-        System.out.println(list);
-        System.out.println(list.length);
-
-        System.out.println(list.removeFirst());
-        System.out.println(list);
-        System.out.println(list.length);
-
-        list.prepend(1);
-        list.append(3);
-        list.append(4);
-        System.out.println(list);
-        System.out.println(list.length);
-        System.out.println(list.get(3));
-        System.out.println(list.get(0));
-
-        System.out.println(list.set(2, 33));
-        System.out.println(list.set(99, 33));
-        System.out.println(list);
-        System.out.println(list.length);
-
-        System.out.println(list.insert(2, 22));
-        System.out.println(list);
-        System.out.println(list.length);
-
-        System.out.println(list.remove(2));
-        System.out.println(list);
-        System.out.println(list.length);
-
-    }
-
     private Node head;
     private Node tail;
     private int length;
@@ -57,6 +13,14 @@ public class LinkedListP implements LinkedListInterface {
         this.head = newNode;
         this.tail = newNode;
         length++;
+    }
+
+    public Node getFirst() {
+        return head;
+    }
+
+    public Node getLast() {
+        return tail;
     }
 
     @Override
@@ -212,11 +176,27 @@ public class LinkedListP implements LinkedListInterface {
 
     @Override
     public void reverse() {
+        Node temp = head;
+        head = tail;
+        tail = temp;
 
+        Node after;
+        Node before = null;
+
+        for (int i = 0; i < length; i++) {
+            after = temp.getNext();
+            temp.setNext(before);
+            before = temp;
+            temp = after;
+        }
     }
 
     private boolean isIndexFail(int index) {
         return index < 0 || index >= length;
+    }
+
+    public int length() {
+        return length;
     }
 }
 

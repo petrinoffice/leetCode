@@ -1,8 +1,8 @@
-package dataStructure;
+package data_structure.linked_list;
 
 import java.util.Objects;
 
-class Node {
+public class Node {
     private int value;
     private Node next;
 

@@ -1,4 +1,4 @@
-package dataStructure;
+package data_structure.linked_list;
 
 public interface LinkedListInterface {
     @Override
