@@ -50,16 +50,16 @@ public class N2_Add_Two_Numbers {
         }
 
         int left = l1 == null ? 0 : l1.val;
-        int rigth = l2 == null ? 0 : l2.val;
+        int right = l2 == null ? 0 : l2.val;
 
-        int sum = left + rigth;
+        int sum = left + right;
 
         ListNode nextL = l1 == null ? null : l1.next;
         ListNode nextR = l2 == null ? null : l2.next;
 
-        ListNode temp = null;
+        ListNode temp = new ListNode();
         if (sum > 9) {
-            temp = new ListNode(sum - 10);
+            temp.val = (sum - 10);
             if (nextL != null) {
                 nextL.val = nextL.val + 1;
             } else if (nextR != null) {
