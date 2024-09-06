@@ -6,6 +6,7 @@ public class BinarySearch {
         System.out.println(new BinarySearch().search(new int[]{1,2,3,4,5,6,7,8,9}, 3));
         System.out.println(new BinarySearch().search(new int[]{1,2,3,4,5,6,7,8,9}, 9));
         System.out.println(new BinarySearch().search(new int[]{1,2,3,4,5,6,7,8,9}, 0));
+        System.out.println(new BinarySearch().search(new int[]{1,3,5,6}, 5));
     }
 
     private int search(int[] nums, int n){
